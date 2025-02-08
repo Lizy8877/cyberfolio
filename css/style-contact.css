@@ -1,0 +1,193 @@
+/* Style pour la section "Haut de la page d'accueil" */
+.haut {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Hauteur pleine de la fenêtre */
+  background: url('../GIF/chat-matrice2.gif') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Superposition assombrie du fond */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Assombrissement pour lisibilité */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; /* Texte blanc */
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column; /* Disposition verticale du contenu */
+}
+
+/* Style du titre H1 */
+.overlay h1 {
+  font-size: 3em;
+  margin-bottom: 20px; /* Espacement entre le H1 et le paragraphe */
+  font-weight: bold;
+  /* color: #fff; Couleur du titre en blanc */
+}
+
+/* Style du paragraphe sous le titre */
+.overlay p {
+  font-size: 1.5em;
+  max-width: 800px; /* Limite la largeur du texte */
+  line-height: 1.6;
+}
+
+
+/* Corps général */
+body, html {
+  margin: 5px;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  }
+
+/* Section globale */
+.contenu {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement si besoin */
+  text-align: center; /* Centre le texte */
+  padding: 60px 20px; /* Espacement intérieur */
+  background-color: #000000; /* Fond léger */
+}
+
+/* Conteneur du texte */
+.contenu-texte {
+  max-width: 1400px; /* Limite la largeur pour une bonne lisibilité */
+  width: 100%;
+}
+
+/* Style du titre */
+.contenu-texte h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ffffff; /* Couleur foncée pour contraste */
+}
+
+/* Style des paragraphes */
+.contenu-texte p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #ffffff; /* Gris doux pour lisibilité */
+  margin-bottom: 15px;
+}
+
+
+/*Partie du formulaire et points de contact*/
+/* Section Contact */
+#contact {
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Conteneur principal */
+.contact-container {
+  max-width: 800px; /* Augmenté pour être plus large */
+  margin: 0 auto;
+}
+
+/* Titre et texte */
+.contact-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Formulaire */
+.contact-form {
+  background: #111;
+  padding: 30px; /* Augmenté pour plus d’espace */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 1000px; /* Augmenté pour un meilleur rendu */
+  margin: 0 auto; /* Centrage */
+  border: 2px solid; /* Bordure de base */
+  border-image: linear-gradient(to right, #ffb800, #9683ec) 1; /* Bordure avec dégradé */
+  border-radius: 10px; /* Arrondir les coins */
+}
+
+/* Champs du formulaire */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 95%;
+  padding: 12px; /* Un peu plus grand pour le confort */
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ffb800;
+  outline: none;
+}
+
+/* Bouton d'envoi */
+.btn-submit {
+  width: 95%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, #ffb800, #9683ec);
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(to right, #9683ec, #ffb800);
+}
+
+/* Infos de contact */
+.contact-infos {
+  margin-top: 20px;
+}
+
+.contact-infos p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.contact-infos i {
+  color: #ffb800;
+  margin-right: 10px;
+}

@@ -1,0 +1,459 @@
+/* Superposition assombrie du fond */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Assombrissement pour lisibilité */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* Texte blanc */
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column; /* Disposition verticale du contenu */
+}
+
+  /* Style du titre H1 */
+.overlay h1 {
+    font-size: 3em;
+    margin-bottom: 20px; /* Espacement entre le H1 et le paragraphe */
+    font-weight: bold;
+}
+
+  /* Style du paragraphe sous le titre */
+.overlay p {
+    font-size: 1.5em;
+    max-width: 800px; /* Limite la largeur du texte */
+    line-height: 1.6;
+}
+
+
+
+/*Le sytle pour le corps */
+/* Corps général */
+body, html {
+    margin: 5px;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    }
+
+/* Section globale */
+.contenu {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement si besoin */
+    text-align: center; /* Centre le texte */
+    padding: 60px 20px; /* Espacement intérieur */
+    background-color: #000000;
+}
+
+/* Conteneur du texte */
+.contenu-texte {
+    max-width: 1400px; /* Limite la largeur pour une bonne lisibilité */
+    width: 100%;
+}
+
+/* Style du titre */
+.contenu-texte h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ffffff; /* Couleur foncée pour contraste */
+}
+
+/* Style des paragraphes */
+.contenu-texte p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ffffff; 
+    margin-bottom: 15px;
+}
+
+/* Alignement des listes à gauche */
+.contenu-texte ul,
+.contenu-texte ol {
+    text-align: left; /* Aligne le texte des listes à gauche */
+    padding-left: 20px; /* Ajoute un peu de marge à gauche pour l'indentation des puces */
+}
+
+/*LES BOUTONS*/
+/* Container des boutons */
+.bouton-centre {
+    display: flex;                   /* Utilise Flexbox pour aligner les éléments */
+    justify-content: space-between;   /* Espace les éléments de manière égale */
+    align-items: center;             /* Aligne les boutons verticalement au centre */
+    margin: 0;                       /* Supprime les marges par défaut */
+    margin-bottom: 100px;            /* Espace entre la section et le bas de la page */
+}
+
+/* Liste des boutons */
+.actions {
+    list-style-type: none;           /* Retire les puces de la liste */
+    padding: 0;                      /* Retire le padding par défaut */
+    margin: 0;                       /* Retire la marge par défaut */
+    display: flex;                   /* Affiche les éléments en ligne */
+    width: 100%;                     /* Assure que chaque bouton prend une largeur égale */
+}
+
+/* Boutons */
+.actions li {
+    flex: 1;                          /* Chaque bouton prend une largeur égale */
+    text-align: center;               /* Centrer le texte dans chaque bouton */
+}
+
+/* Style des boutons */
+.button {
+    display: inline-block;            /* Affiche les boutons en ligne */
+    padding: 10px 20px;               /* Taille du bouton */
+    background-color: #3498db;        /* Couleur de fond du bouton */
+    color: white;                     /* Couleur du texte */
+    text-decoration: none;            /* Retire le soulignement du lien */
+    border-radius: 5px;               /* Arrondir les bords du bouton */
+    transition: background-color 0.3s; /* Transition pour l'effet au survol */
+}
+
+.button:hover {
+    background-color: #2980b9;        /* Change la couleur de fond au survol */
+}
+
+
+
+/*Partie présentation du projet*/
+.full-section {
+flex: 0 0 60%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+position: relative;
+}
+
+.content {
+display: flex;
+width: 100%;
+height: 100%;
+}
+
+/* Image */
+.image-container {
+flex: 0 0 40%;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.image-container img {
+width: 100%;
+height: 100%;
+}
+
+/* Texte */
+.text-container {
+flex: 2;
+padding: 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: black;
+}
+
+.text-container h2 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+}
+
+.text-container p {
+font-size: 1.2rem;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+
+
+
+/*Pour la roadmap*/
+/* Section principale */
+.roadmap-section {
+    background-color: #000;
+    padding: 40px 20px;
+    color: #fff;
+}
+
+/* Conteneur général */
+.roadmap-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Titre principal */
+.roadmap-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-image: linear-gradient(90deg, #ffb800, #9683ec);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Description */
+.roadmap-description {
+    font-size: 1.2rem;
+    color: #9683ec;
+    margin-bottom: 30px;
+}
+
+/* Liste principale */
+.roadmap-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Éléments principaux (jalons) */
+.roadmap-item {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    background: linear-gradient(90deg, #ffb800, #9683ec);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 15px 0;
+    padding: 15px 20px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Icône de flèche pour les jalons */
+.roadmap-item::before {
+    content: '▼';
+    position: absolute;
+    left: -25px; /* Augmenté pour plus d'espace */
+    font-size: 1.2rem;
+    color: #ffb800;
+    transition: transform 0.3s ease;
+}
+
+/* Rotation de l'icône au survol */
+.roadmap-item:hover::before {
+    transform: rotate(180deg);
+}
+
+/* Effet au survol */
+.roadmap-item:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Sous-liste cachée par défaut */
+.roadmap-sublist {
+    display: none;
+    list-style-type: none;
+    padding-left: 25px;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+/* Sous-éléments des jalons */
+.roadmap-subitem {
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(90deg, #ffb800, #9683ec);
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+    padding-left: 25px;
+    margin: 8px 0;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+/* Icône des sous-éléments */
+.roadmap-subitem::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+    color: #ffb800;
+}
+
+/* Affichage des sous-listes au survol */
+.roadmap-item:hover .roadmap-sublist {
+    display: block;
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+/* Apparition progressive des sous-éléments */
+.roadmap-item:hover .roadmap-subitem {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Style des liens */
+.roadmap-item a {
+    color: #ffb800;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.roadmap-item a:hover {
+    color: #9683ec;
+}
+
+
+
+
+/*Pour la partie savoir, savoir-faire et savoir-être*/
+.savoirs-container {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px 20px;
+}
+
+.savoirs-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffb800, #9683ec);
+    transform: translateX(-50%);
+}
+
+.savoir-box {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(150, 131, 236, 0.3);
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.savoir-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 184, 0, 0.4);
+}
+
+/* Alternance gauche/droite */
+.savoir-box:nth-child(odd) {
+    left: 0;
+}
+
+.savoir-box:nth-child(even) {
+    left: 55%;
+}
+
+.savoir-box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #ffb800, #9683ec);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px rgba(255, 184, 0, 0.6);
+}
+
+.savoir-box:nth-child(odd)::before {
+    right: -30px;
+}
+
+.savoir-box:nth-child(even)::before {
+    left: -30px;
+}
+
+.savoir-box h3 {
+    font-size: 1.4em;
+    color: #ffb800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Amélioration : agrandir la zone des <ul> et les décaler plus loin */
+.savoir-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    width: 800px;  /* Augmenté pour plus d'espace */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    padding: 20px; /* Augmenté pour plus de confort */
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Augmentation du décalage par rapport à la timeline */
+.savoir-box:nth-child(odd) ul {
+    left: 120%; /* Plus éloigné pour un meilleur espacement */
+}
+
+.savoir-box:nth-child(even) ul {
+    right: 120%; /* Plus éloigné pour un meilleur espacement */
+}
+
+/* Apparition de la liste au survol */
+.savoir-box:hover ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.savoir-box ul li {
+    color: white;
+    font-size: 1.1em;
+    padding: 10px 0; /* Plus d’espace entre les items */
+    position: relative;
+}
+
+.savoir-box ul li::before {
+    content: "•";
+    color: #9683ec;
+    font-size: 1.2em;
+    margin-right: 8px;
+}
+
+/*Animations*/
+.savoir-box ul {
+    transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, visibility 0s 0.3s;
+}
+
+.savoir-box:hover ul {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, visibility 0s;
+}
+
+.savoir-box::before {
+    transition: transform 0.2s ease-out;
+}
+
+.savoir-box:hover::before {
+    transform: scale(1.3);
+}

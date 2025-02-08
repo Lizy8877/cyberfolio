@@ -1,0 +1,197 @@
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease; /* Transition pour l'effet d'assombrissement */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent; /* Transparent */
+    color: #fff;
+    position: relative;
+}
+
+/* Menu de navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent; /* Transparence totale */
+    padding: 10px;
+    border: 2px solid transparent; /* Bordure avec dégradé */
+    border-image: linear-gradient(90deg, #ffb800, #9683ec) 1;
+}
+
+/* Liste de menu */
+nav ul.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+/* Liens du menu */
+nav ul.nav > li.nav1, 
+nav ul.nav > li.nav2, 
+nav ul.nav > li.nav3 {
+    position: relative;
+    margin: 0 10px;
+}
+
+/* Liens du menu principal */
+nav ul.nav > li.nav1 > a, 
+nav ul.nav > li.nav2 > a, 
+nav ul.nav > li.nav3 > a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    text-decoration: none;
+    color: #ffb800; /* Couleur par défaut */
+    font-weight: bold;
+}
+
+/* Effet au survol des liens */
+nav ul.nav > li.nav1 > a:hover,
+nav ul.nav > li.nav2 > a:hover,
+nav ul.nav > li.nav3 > a:hover {
+    color: #9683ec; /* Changement de couleur au survol */
+}
+
+/* Sous-menu (caché par défaut) */
+nav ul.nav > li > ul.under1 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    border: 2px solid transparent;
+    border-image: linear-gradient(90deg, #ffb800, #9683ec) 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 200px;
+    max-width: 300px;
+    padding: 5px 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Affichage du sous-menu au survol */
+nav ul.nav > li:hover > ul.under1 {
+    display: block;
+}
+
+/* Sous-sous-menu */
+nav ul.nav > li > ul.under1 > li > ul.under2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #000;
+    border: 2px solid transparent;
+    border-image: linear-gradient(90deg, #ffb800, #9683ec) 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 200px;
+    max-width: 300px;
+    padding: 5px 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Affichage du sous-sous-menu au survol */
+nav ul.nav > li > ul.under1 > li:hover > ul.under2 {
+    display: block;
+}
+
+/* Styles des liens des sous-menus */
+nav ul.nav > li > ul.under1 li a,
+nav ul.nav > li > ul.under1 > li > ul.under2 li a {
+    padding: 10px;
+    color: #ffb800;
+    text-decoration: none;
+    display: block;
+    background-color: #000;
+    border-bottom: 1px solid #333;
+    white-space: nowrap;
+}
+
+/* Effet de survol des sous-menus */
+nav ul.nav > li > ul.under1 li a:hover,
+nav ul.nav > li > ul.under1 > li > ul.under2 li a:hover {
+    color: #9683ec;
+    background-color: #111;
+}
+
+/* Icône de sous-menu */
+nav .icon1 {
+    margin-left: 5px;
+    font-size: 0.8em;
+    color: #ffb800;
+}
+
+/* Style du bouton burger */
+.burger {
+    background: none;
+    border: none;
+    color: #ffb800;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; /* Caché par défaut */
+}
+
+/* Menu adaptatif : c'est-à-dire sur tablette et mobile */
+@media (max-width: 1024px) {
+    body.overlay {
+        background-color: rgba(0, 0, 0, 0.7); /* Assombrir le fond */
+        position: relative;
+    }
+
+    /* Cacher le menu par défaut */
+    nav {
+        display: none; /* Menu caché par défaut */
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px; /* Largeur du menu burger */
+        height: 100%;
+        background-color: #000; /* Fond sombre */
+        padding-top: 50px;
+        z-index: 1001; /* Au-dessus du contenu */
+    }
+
+    /* Affichage du bouton burger */
+    .burger {
+        display: block; /* Afficher le bouton burger */
+    }
+
+    /* Menu ouvert */
+    nav.open {
+        display: flex; /* Afficher le menu quand il est ouvert */
+    }
+
+    /* Sous-menus pour les petits écrans */
+    nav ul.nav > li > ul.under1 {
+        display: none; /* Cacher les sous-menus par défaut */
+    }
+
+    nav ul.nav > li.open > ul.under1 {
+        display: block; /* Afficher le sous-menu quand l'élément parent est ouvert */
+    }
+
+    nav ul.nav > li > ul.under1 > li > ul.under2 {
+        display: none; /* Cacher les sous-sous-menus par défaut */
+    }
+
+    nav ul.nav > li.open > ul.under1 > li.open > ul.under2 {
+        display: block; /* Afficher les sous-sous-menus quand l'élément parent est ouvert */
+    }
+}

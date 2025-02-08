@@ -1,0 +1,114 @@
+p, ol {
+    color: white;
+}
+
+
+h1 {
+    background: linear-gradient(90deg, #ffb800, #9683ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 45px;
+}
+
+h2 {
+    background: linear-gradient(90deg, #9683ec, #ffb800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 40px;
+}
+
+
+h1, h2 {
+    font-family: 'Dancing Script', cursive;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+/* Appliquer une taille de police de 20px à tous les <p> et <ul> */
+p, ul, ol {
+    font-size: 20px;
+}
+
+/* Réduire la taille des <p> avec la classe .footer à 14px */
+p.footer {
+    font-size: 14px;
+}
+
+/* Pied de page */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border-top: 3px solid;
+    border-image: linear-gradient(90deg, #ffb800, #9683ec) 1;
+    text-align: center;
+}
+
+a {
+    color: #ffb800;
+}
+
+
+/* Les boutons */
+.actions {
+list-style: none;
+padding: 0;
+}
+
+.actions .button {
+display: inline-block;
+margin-top: 15px;
+padding: 10px 20px;
+border-radius: 15px;
+background: linear-gradient(to right, #ffb800, #9683ec);
+color: rgb(0, 0, 0);
+text-decoration: none;
+font-weight: bold;
+width: 200px;
+text-align: center;
+font-size: 16px;
+}
+
+/* Au survol de la souris */
+.actions .button:hover {
+background: linear-gradient(to right, #9683ec, #ffb800); /* Dégradé inversé au survol */
+}
+
+/* Au moment du clic */
+.actions .button:active {
+background: #9683ec;
+}
+
+/* Diviseur
+/* 🌟 Diviseur Arabesque 
+.divider {
+    width: 15%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ✨ Animation de l'arabesque 
+.divider svg path {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawArabesque 3s ease-in-out forwards;
+}
+
+/* 🌊 Effet de tracé progressif 
+@keyframes drawArabesque {
+    0% {
+        stroke-dashoffset: 500;
+        opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+} */

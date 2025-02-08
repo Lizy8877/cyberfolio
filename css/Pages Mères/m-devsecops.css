@@ -1,0 +1,12 @@
+/* Style pour la section "Haut de la page d'accueil" */
+#haut {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Hauteur pleine de la fenêtre */
+    background: url('../../GIF/Gif-code2.gif') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}

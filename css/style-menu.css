@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent; /* Transparence totale */
+    padding: 10px;
+    border: 2px solid transparent; /* La bordure avec dégradé */
+    border-image: linear-gradient(90deg, #ffb800, #9683ec) 1;
+}
+
+nav ul.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul.nav > li.nav1, 
+nav ul.nav > li.nav2, 
+nav ul.nav > li.nav3 {
+    position: relative;
+    margin: 0 10px;
+}
+
+nav ul.nav > li.nav1 > a, 
+nav ul.nav > li.nav2 > a, 
+nav ul.nav > li.nav3 > a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    text-decoration: none;
+    color: #ffb800; /* Couleur par défaut */
+    font-weight: bold;
+}
+
+nav ul.nav > li.nav1 > a:hover,
+nav ul.nav > li.nav2 > a:hover,
+nav ul.nav > li.nav3 > a:hover {
+    color: #9683ec; /* Changement de couleur au survol */
+}
+
+nav ul.nav > li > ul.under1 {
+    display: none;
+    position: absolute;
+    top: 100%; /* Aligner en bas du parent */
+    left: 0; /* Alignement à gauche */
+    background-color: #000; /* Fond noir pour les sous-menus */
+    border: 2px solid transparent; /* Bordure avec dégradé */
+    border-image: linear-gradient(90deg, #ffb800, #9683ec) 1; /* Dégradé appliqué */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+    /* Taille adaptable */
+    min-width: 200px; /* Largeur minimale */
+    max-width: 300px; /* Largeur maximale */
+    padding: 5px 0; /* Espacement en haut et en bas */
+
+    /* Suppression des puces */
+    list-style: none;
+    padding: 0; /* Retire l'espacement intérieur des listes */
+    margin: 0; /* Retire l'espacement extérieur des listes */
+}
+
+nav ul.nav > li:hover > ul.under1 {
+    display: block;
+}
+
+nav ul.nav > li > ul.under1 > li > ul.under2 {
+    display: none;
+    position: absolute;
+    top: 0; /* Aligner en haut du parent sous-menu */
+    left: 100%; /* Positionner à droite du parent */
+    background-color: #000; /* Fond noir pour les sous-sous-menus */
+    border: 2px solid transparent; /* Bordure avec dégradé */
+    border-image: linear-gradient(90deg, #ffb800, #9683ec) 1; /* Dégradé appliqué */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+    /* Taille adaptable */
+    min-width: 200px; /* Largeur minimale */
+    max-width: 300px; /* Largeur maximale */
+    padding: 5px 0; /* Espacement en haut et en bas */
+
+    /* Suppression des puces */
+    list-style: none;
+    padding: 0; /* Retire l'espacement intérieur des listes */
+    margin: 0; /* Retire l'espacement extérieur des listes */
+}
+
+nav ul.nav > li > ul.under1 > li:hover > ul.under2 {
+    display: block;
+}
+
+/* Style des éléments des sous-menus et sous-sous-menus */
+nav ul.nav > li > ul.under1 li a,
+nav ul.nav > li > ul.under1 > li > ul.under2 li a {
+    padding: 10px;
+    color: #ffb800; /* Couleur du texte */
+    text-decoration: none;
+    display: block;
+    background-color: #000; /* Fond noir */
+    border-bottom: 1px solid #333; /* Séparation entre les éléments */
+    white-space: nowrap; /* Éviter le retour à la ligne */
+}
+
+nav ul.nav > li > ul.under1 li a:hover,
+nav ul.nav > li > ul.under1 > li > ul.under2 li a:hover {
+    color: #9683ec; /* Couleur au survol */
+    background-color: #111; /* Légère variation de fond au survol */
+}
+
+nav ul.nav > li > ul.under1 > li > a {
+    padding: 10px;
+    white-space: nowrap;
+    color: #ffb800; /* Couleur du texte dans les sous-menus */
+    background-color: #000; /* Fond noir */
+    border-bottom: 1px solid #333; /* Bordure subtile entre les éléments */
+}
+
+nav ul.nav > li > ul.under1 > li > a:hover {
+    color: #9683ec; /* Changement de couleur au survol */
+    background-color: #111; /* Légère variation du fond au survol */
+}
+
+nav ul.nav > li > ul.under1 > li > ul.under2 > li > a {
+    color: #ffb800; /* Couleur du texte dans les sous-sous-menus */
+    background-color: #000; /* Fond noir */
+    padding: 10px;
+    white-space: nowrap; /* Empêche le texte de déborder */
+}
+
+nav ul.nav > li > ul.under1 > li > ul.under2 > li > a:hover {
+    color: #9683ec; /* Changement de couleur au survol */
+    background-color: #111; /* Légère variation du fond au survol */
+}
+
+nav .icon1 {
+    margin-left: 5px;
+    font-size: 0.8em;
+    color: #ffb800;
+}

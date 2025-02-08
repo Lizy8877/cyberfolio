@@ -1,0 +1,281 @@
+/* Général */
+body {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section */
+.cyber-section {
+    padding: 50px 10%;
+}
+
+/* Conteneur en deux colonnes */
+.cyber-container {
+    display: flex;
+    align-items: stretch; /* Assure que les deux colonnes ont la même hauteur */
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Alternance des positions */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Texte */
+.cyber-text {
+    flex: 1;
+    padding: 40px;
+    background: #111; /* Fond sombre */
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 0px 15px rgba(255, 184, 0, 0.3);
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+}
+
+/* Vidéo */
+.cyber-video {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cyber-video video {
+    width: 100%;
+    max-width: 800px;
+    height: 100%; /* La vidéo prend toute la hauteur sans être coupée */
+    object-fit: contain; /* Garde toute la vidéo visible sans zoom */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(150, 131, 236, 0.5);
+    background: black; /* Pour éviter les bordures blanches si la vidéo ne remplit pas complètement l'espace */
+}
+
+/* Assure que texte et vidéo aient la même hauteur */
+.cyber-text, .cyber-video {
+    height: auto;
+    min-height: 400px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cyber-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .reverse {
+        flex-direction: column;
+    }
+
+    .cyber-video, .cyber-text {
+        width: 100%;
+        height: auto;
+    }
+
+    .cyber-text {
+        padding: 20px;
+    }
+
+    .cyber-video video {
+        height: auto;
+    }
+}
+
+
+
+/*Partie pour le haut de page*/
+/* Style pour la section "Haut de la page */
+#haut {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Hauteur pleine de la fenêtre */
+    background: url('../../GIF/Gif-code3.gif') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Section globale */
+.contenu {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement si besoin */
+    text-align: center; /* Centre le texte */
+    padding: 60px 20px; /* Espacement intérieur */
+    background-color: #000000; 
+}
+
+/* Conteneur du texte */
+.contenu-texte {
+    max-width: 1400px; /* Limite la largeur pour une bonne lisibilité */
+    width: 100%;
+}
+
+/* Style du titre */
+.contenu-texte h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ffffff; /* Couleur foncée pour contraste */
+}
+
+/* Style des paragraphes */
+.contenu-texte p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ffffff; 
+    margin-bottom: 15px;
+}
+
+
+/*La partie compétences*/
+/* Style du titre (en dehors du bloc) */
+.competences-title {
+    color: #ffb800;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Conteneur des compétences */
+.competences {
+    background: #111; /* Noir profond */
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Liste des compétences */
+.competences-list {
+    list-style: none;
+    padding: 0;
+}
+
+.competences-list li {
+    background: linear-gradient(135deg, #ffb800, #9683ec);
+    color: black;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+/* Texte en couleur */
+.competences-list li span {
+    font-weight: bold;
+}
+
+/* Effet au survol */
+.competences-list li:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+
+/*Galerie photo*/
+/* Style de la section */
+.galerie {
+    text-align: center;
+    padding: 40px;
+    background: #000000; /* Fond noir */
+}
+
+/* Titre */
+.galerie-title {
+    color: #ffb800;
+    margin-bottom: 20px;
+}
+
+/* Bouton LinkedIn */
+.galerie-actions {
+    margin-bottom: 20px;
+}
+
+.galerie-button {
+    background: linear-gradient(135deg, #ffb800, #9683ec);
+    color: black;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.galerie-button:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+/* Conteneur des images */
+.galerie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Style des images */
+.galerie-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #ffb800;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    cursor: pointer; /* Indique que l'image est cliquable */
+}
+
+.galerie-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 184, 0, 0.7);
+}
+
+/* Lightbox (agrandissement des images) */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #ffb800;
+    cursor: pointer;
+}
